@@ -293,6 +293,27 @@ char_property! {
             human => "Emoji Base and Glue After ZWJ",
         }
 
+        /// Extend_ExtCccZwj
+        Extend_ExtCccZwj {
+            abbr => EECZ,
+            long => Extend_ExtCccZwj,
+            human => "Extended CCC ZWJ",
+        }
+
+        /// ZWJ_ExtCccZwj
+        ZWJ_ExtCccZwj {
+            abbr => ZEZ,
+            long => ZWJ_ExtCccZwj,
+            human => "ZWJ Extended CCC ZWJ",
+        }
+
+        /// Extended_Pictographic
+        ExtPict {
+            abbr => EP,
+            long => ExtPict,
+            human => "Extended Pictographic",
+        }
+
         /// All other characters
         Other {
             abbr => XX,
