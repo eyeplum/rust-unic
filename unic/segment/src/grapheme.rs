@@ -259,7 +259,7 @@ enum PairResult {
     /// definitely a break
     Break,
 
-    /// a break iff not in extended mode
+    /// a break if not in extended mode
     Extended,
 
     /// a break if preceded by an even number of Regional Indicators
@@ -305,11 +305,9 @@ fn check_pair(before: GCB, after: GCB) -> PairResult {
         (GCB::Prepend, _) => Extended,     // GB9b
 
         // Do not break within Emoji Modifier Sequences or Emoji ZWJ Sequences.
-        (GCB::EBase, GCB::EModifier) => NotBreak,    // GB10
-        (GCB::EBaseGAZ, GCB::EModifier) => NotBreak, // GB10
-        (GCB::Extend, GCB::EModifier) => Emoji,      // GB10
-        (GCB::ZWJ, GCB::GlueAfterZwj) => NotBreak,   // GB11
-        (GCB::ZWJ, GCB::EBaseGAZ) => NotBreak,       // GB11
+        (GCB::ExtPict, GCB::ExtPict) => NotBreak, // GB11
+        (GCB::Extend, GCB::ExtPict) => Emoji,     // GB11
+        (GCB::ZWJ, GCB::ExtPict) => NotBreak,     // GB11
 
         // Do not break within emoji flag sequences. That is, do not break between regional
         // indicator (RI) symbols if there is an odd number of RI characters before the break point.
