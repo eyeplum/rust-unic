@@ -311,13 +311,6 @@ char_property! {
             human => "Whitespace characters",
         }
 
-        /// Extended_Pictographic
-        ExtPict {
-            abbr => EP,
-            long => ExtPict,
-            human => "Extended Pictographic",
-        }
-
         /// All other characters
         Other {
             abbr => XX,
