@@ -305,9 +305,7 @@ fn check_pair(before: GCB, after: GCB) -> PairResult {
         (GCB::Prepend, _) => Extended,     // GB9b
 
         // Do not break within Emoji Modifier Sequences or Emoji ZWJ Sequences.
-        (GCB::ExtPict, GCB::ExtPict) => NotBreak, // GB11
-        (GCB::Extend, GCB::ExtPict) => Emoji,     // GB11
-        (GCB::ZWJ, GCB::ExtPict) => NotBreak,     // GB11
+        (_, GCB::ExtPict) => Emoji, // GB11
 
         // Do not break within emoji flag sequences. That is, do not break between regional
         // indicator (RI) symbols if there is an odd number of RI characters before the break point.
@@ -507,11 +505,17 @@ impl GraphemeCursor {
     }
 
     fn handle_emoji(&mut self, chunk: &str, chunk_start: usize) {
+        let mut found_zwj = false;
         for ch in chunk.chars().rev() {
             match GCB::of(ch) {
+                GCB::ZWJ => found_zwj = true,
                 GCB::Extend => (),
-                GCB::EBase | GCB::EBaseGAZ => {
-                    self.decide(false);
+                GCB::ExtPict => {
+                    if found_zwj {
+                        self.decide(false);
+                    } else {
+                        self.decide(true);
+                    }
                     return;
                 }
                 _ => {

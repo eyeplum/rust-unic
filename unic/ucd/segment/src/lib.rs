@@ -24,6 +24,8 @@ extern crate unic_char_property;
 #[macro_use]
 extern crate unic_char_range;
 
+extern crate unic_emoji_char;
+
 extern crate unic_ucd_version;
 
 mod pkg_info;
