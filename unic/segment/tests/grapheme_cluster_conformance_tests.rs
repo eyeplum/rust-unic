@@ -22,12 +22,19 @@ type TestData = &'static [(
 const TEST_DATA: TestData = include!("tables/grapheme_cluster_break_test_data.rsv");
 
 /// Extra cases that the official test suite doesn't cover.
-const EXTRA_TEST_DATA: TestData = include!("extra_grapheme_cluster_break_test_data.rsv");
+//const EXTRA_TEST_DATA: TestData = include!("extra_grapheme_cluster_break_test_data.rsv");
 
 #[test]
 fn test_graphemes_conformance() {
-    let tests = TEST_DATA.iter().chain(EXTRA_TEST_DATA);
+    //let tests = TEST_DATA.iter().chain(EXTRA_TEST_DATA);
+    let tests = TEST_DATA;
     for &(input, graphemes, legacy_graphemes) in tests {
+        println!(
+            "{:?} | {:?}",
+            Graphemes::new(input).collect::<Vec<&str>>(),
+            graphemes,
+        );
+
         let legacy_graphemes = match legacy_graphemes {
             Some(s) => s,
             None => graphemes,
