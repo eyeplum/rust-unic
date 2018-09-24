@@ -21,7 +21,8 @@ fn test_block_of() {
 
 #[test]
 fn test_block_iter() {
-    assert_eq!(BlockIter::new().count(), 277);
+    // 291 - [High Surrogates, Private Use Surrogates, Low Surrogates]
+    assert_eq!(BlockIter::new().count(), 288);
 
     let basic_latin = BlockIter::new().nth(0).unwrap();
     assert_eq!(basic_latin.range.low, '\u{0}');

@@ -4,10 +4,7 @@ os: linux
 dist: trusty
 
 rust:
-  - nightly
-  - beta
   - stable
-  - 1.26.0  # = MIN_RUST_VERSION
 
 branches:
   except:
