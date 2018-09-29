@@ -12,6 +12,7 @@ specs = [
 "DerivedCoreProperties.txt"     = "DerivedCoreProperties.txt"
 "DerivedNormalizationProps.txt" = "DerivedNormalizationProps.txt"
 "Jamo.txt"                      = "Jamo.txt"
+"NameAliases.txt"               = "NameAliases.txt"
 "PropList.txt"                  = "PropList.txt"
 "ReadMe.txt"                    = "ReadMe.txt"
 "UnicodeData.txt"               = "UnicodeData.txt"
