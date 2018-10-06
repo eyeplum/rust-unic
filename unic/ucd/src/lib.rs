@@ -33,7 +33,7 @@ pub extern crate unic_ucd_category as category;
 pub extern crate unic_ucd_common as common;
 pub extern crate unic_ucd_ident as ident;
 pub extern crate unic_ucd_name as name;
-pub extern crate unic_ucd_name_aliases as name_aliase;
+pub extern crate unic_ucd_name_aliases as name_aliases;
 pub extern crate unic_ucd_normal as normal;
 pub extern crate unic_ucd_segment as segment;
 pub extern crate unic_ucd_unihan as unihan;
@@ -77,7 +77,7 @@ pub use common::{is_alphabetic, is_white_space, Alphabetic, WhiteSpace};
 
 pub use name::Name;
 
-pub use name_aliase::{
+pub use name_aliases::{
     alternate_names_of,
     control_code_names_of,
     figments_of,
