@@ -15,6 +15,10 @@ exclude = []
 [dev-dependencies]
 unic-char-range = { path = "../range/", version = "0.7.0" }
 
+[features]
+default = []
+unstable = []
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }

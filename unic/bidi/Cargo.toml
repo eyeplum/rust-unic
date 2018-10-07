@@ -18,6 +18,9 @@ exclude = [
 [features]
 default = []
 bench_it = []
+unstable = [
+    "unic-ucd-bidi/unstable",
+]
 
 [dependencies]
 matches = "0.1"

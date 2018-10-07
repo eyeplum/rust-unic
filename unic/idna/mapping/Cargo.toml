@@ -16,6 +16,10 @@ unic-char-range = { path = "../../char/range/", version = "0.7.0" }
 unic-char-property = { path = "../../char/property/", version = "0.7.0" }
 unic-ucd-version = { path = "../../ucd/version/", version = "0.7.0" }
 
+[features]
+default = []
+unstable = []
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }

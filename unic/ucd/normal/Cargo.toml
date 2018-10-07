@@ -23,6 +23,7 @@ unic-ucd-category = { path = "../category/", version = "0.7.0" }
 
 [features]
 default = []
+unstable = []
 
 [badges]
 maintenance = { status = "actively-developed" }

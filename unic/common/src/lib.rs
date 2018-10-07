@@ -11,7 +11,7 @@
 #![no_std]
 #![forbid(bad_style, future_incompatible, missing_debug_implementations, missing_docs,
           unconditional_recursion, unsafe_code, unused)]
-#![cfg_attr(feature = "unstable", feature(unicode))]
+// #![cfg_attr(feature = "unstable", feature(unicode))]
 
 //! # UNIC — Common Utilities
 //!

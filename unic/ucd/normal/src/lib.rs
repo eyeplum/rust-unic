@@ -12,6 +12,7 @@
 #![no_std]
 #![forbid(future_incompatible, missing_debug_implementations, unconditional_recursion, unsafe_code)]
 #![deny(bad_style, unsafe_code, missing_docs, unused)]
+#![cfg_attr(unstable, feature("unstable"))]
 
 //! # UNIC — UCD — Normalization
 //!

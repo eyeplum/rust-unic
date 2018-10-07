@@ -17,6 +17,11 @@ default = [ "xid" ]
 pattern = []
 xid = []
 id = []
+unstable = [
+    "unic-char-property/unstable",
+    "unic-char-range/unstable",
+    "unic-ucd-version/unstable",
+]
 
 [dependencies]
 unic-char-property = { path = "../../char/property/", version = "0.7.0" }

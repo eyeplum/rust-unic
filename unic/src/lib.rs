@@ -10,7 +10,7 @@
 
 #![forbid(bad_style, future_incompatible, missing_debug_implementations, missing_docs,
           unconditional_recursion, unsafe_code, unused)]
-
+#![cfg_attr(feature = "unstable", feature(unstable))]
 //! # UNIC: Unicode and Internationalization Crates for Rust
 //!
 //! The `unic` super-crate (this) is a collection of all UNIC components, providing
@@ -175,7 +175,10 @@ pub extern crate unic_segment as segment;
 pub extern crate unic_ucd as ucd;
 
 /// The [Unicode version](https://www.unicode.org/versions/) of data
-pub use ucd::UNICODE_VERSION;
+#[cfg(unstable)]
+pub use crate::ucd::UNICODE_VERSION;
+#[cfg(not(unstable))]
+pub use self::ucd::UNICODE_VERSION;
 
 mod pkg_info;
 pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};

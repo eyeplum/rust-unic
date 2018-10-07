@@ -12,6 +12,7 @@
 #![forbid(bad_style, future_incompatible, missing_debug_implementations, missing_docs,
           unconditional_recursion, unsafe_code, unused)]
 #![deny(unused_imports)]
+#![cfg_attr(feature = "unstable", feature(unstable))]
 
 //! # UNIC — Unicode IDNA Compatibility Processing
 //!
@@ -50,10 +51,13 @@ extern crate unic_ucd_normal;
 extern crate unic_idna_mapping as mapping;
 extern crate unic_idna_punycode as punycode;
 
+#[cfg(unstable)]
+pub use crate::mapping::UNICODE_VERSION;
+#[cfg(not(unstable))]
+pub use self::mapping::UNICODE_VERSION;
+
 mod pkg_info;
 pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
-
-pub use mapping::UNICODE_VERSION;
 
 mod process;
 pub use self::process::{Errors, Flags};

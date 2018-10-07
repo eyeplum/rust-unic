@@ -19,6 +19,12 @@ unic-ucd-segment = { path = "../ucd/segment/", version = "0.7.0" }
 quickcheck = "0.6"
 unic-ucd-common = { path = "../ucd/common/", version = "0.7.0" }
 
+[features]
+default = []
+unstable = [
+    "unic-ucd-segment/unstable",
+]
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }
