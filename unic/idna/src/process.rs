@@ -13,12 +13,13 @@
 #[allow(unused_imports)]
 use std::ascii::AsciiExt;
 
-use unic_normal::StrNormalForm;
-use unic_ucd_bidi::{bidi_class, BidiClass};
-use unic_ucd_normal::is_combining_mark;
 
-use mapping::Mapping;
-use punycode;
+use super::unic_normal::StrNormalForm;
+use super::unic_ucd_bidi::{bidi_class, BidiClass};
+use super::unic_ucd_normal::is_combining_mark;
+use super::mapping::Mapping;
+use super::punycode;
+
 
 /// Prefix used in Punycode encoding.
 pub static PUNYCODE_PREFIX: &'static str = "xn--";

@@ -82,10 +82,10 @@ extern crate unic_ucd_common;
 pub use unic_ucd_segment::UNICODE_VERSION;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 mod grapheme;
-pub use grapheme::{GraphemeCursor, GraphemeIncomplete, GraphemeIndices, Graphemes};
+pub use self::grapheme::{GraphemeCursor, GraphemeIncomplete, GraphemeIndices, Graphemes};
 
 mod word;
-pub use word::{WordBoundIndices, WordBounds, Words};
+pub use self::word::{WordBoundIndices, WordBounds, Words};

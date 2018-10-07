@@ -18,6 +18,12 @@ unic-ucd-normal = { path = "../ucd/normal/", version = "0.7.0" }
 [dev-dependencies]
 unic-ucd-version = { path = "../ucd/version/", version = "0.7.0" }
 
+[features]
+default = []
+unstable = [
+    "unic-ucd-normal/unstable"
+]
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }

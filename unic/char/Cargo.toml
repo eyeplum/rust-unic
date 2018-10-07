@@ -12,14 +12,19 @@ readme = "README.md"
 # No tests/benches that depends on /data/
 exclude = []
 
-[features]
-default = []
-std = ["unic-char-range/std"]
-
 [dependencies]
 unic-char-basics = { path = "basics/", version = "0.7.0" }
 unic-char-property = { path = "property/", version = "0.7.0" }
 unic-char-range = { path = "range/", version = "0.7.0" }
+
+[features]
+default = []
+std = ["unic-char-range/std"]
+unstable = [
+    "unic-char-basics/unstable",
+    "unic-char-property/unstable",
+    "unic-char-range/unstable",
+]
 
 [badges]
 maintenance = { status = "actively-developed" }

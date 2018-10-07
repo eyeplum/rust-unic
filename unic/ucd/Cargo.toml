@@ -32,6 +32,23 @@ unic-char-basics = { path = "../char/basics/", version = "0.7.0" }
 unic-char-property = { path = "../char/property/", version = "0.7.0" }
 unic-char-range = { path = "../char/range/", version = "0.7.0" }
 
+[features]
+default = []
+unstable = [
+    "unic-ucd-age/unstable",
+    "unic-ucd-bidi/unstable",
+    "unic-ucd-case/unstable",
+    "unic-ucd-category/unstable",
+    "unic-ucd-common/unstable",
+    "unic-ucd-hangul/unstable",
+    "unic-ucd-ident/unstable",
+    "unic-ucd-name/unstable",
+    "unic-ucd-normal/unstable",
+    "unic-ucd-segment/unstable",
+    "unic-ucd-unihan/unstable",
+    "unic-ucd-version/unstable",
+]
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }

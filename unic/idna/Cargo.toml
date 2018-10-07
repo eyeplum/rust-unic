@@ -21,6 +21,17 @@ unic-ucd-bidi = { path = "../ucd/bidi/", version = "0.7.0" }
 unic-ucd-normal = { path = "../ucd/normal/", version = "0.7.0" }
 unic-ucd-version = { path = "../ucd/version/", version = "0.7.0" }
 
+[features]
+default = []
+unstable = [
+    "unic-idna-punycode/unstable",
+    "unic-idna-mapping/unstable",
+    "unic-normal/unstable",
+    "unic-ucd-bidi/unstable",
+    "unic-ucd-normal/unstable",
+    "unic-ucd-version/unstable",
+]
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }

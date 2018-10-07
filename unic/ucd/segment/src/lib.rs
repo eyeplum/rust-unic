@@ -11,7 +11,7 @@
 #![no_std]
 #![forbid(future_incompatible, missing_debug_implementations, unconditional_recursion, unsafe_code)]
 #![deny(bad_style, missing_docs, unused)]
-
+#![cfg_attr(unstable, feature("unstable"))]
 //! # UNIC — UCD — Segmentation Properties"
 //!
 //! A component of [`unic`: Unicode and Internationalization Crates for Rust](/unic/).
@@ -27,16 +27,16 @@ extern crate unic_char_range;
 extern crate unic_ucd_version;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 pub mod grapheme_cluster_break;
-pub use grapheme_cluster_break::GraphemeClusterBreak;
+pub use self::grapheme_cluster_break::GraphemeClusterBreak;
 
 pub mod sentence_break;
-pub use sentence_break::SentenceBreak;
+pub use self::sentence_break::SentenceBreak;
 
 pub mod word_break;
-pub use word_break::WordBreak;
+pub use self::word_break::WordBreak;
 
 use unic_ucd_version::UnicodeVersion;
 

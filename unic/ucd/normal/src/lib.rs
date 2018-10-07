@@ -12,6 +12,7 @@
 #![no_std]
 #![forbid(future_incompatible, missing_debug_implementations, unconditional_recursion, unsafe_code)]
 #![deny(bad_style, unsafe_code, missing_docs, unused)]
+#![cfg_attr(unstable, feature("unstable"))]
 
 //! # UNIC — UCD — Normalization
 //!
@@ -37,22 +38,22 @@ extern crate unic_ucd_hangul;
 extern crate unic_ucd_version;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 pub mod canonical_combining_class;
-pub use canonical_combining_class::CanonicalCombiningClass;
+pub use self::canonical_combining_class::CanonicalCombiningClass;
 
 mod composition;
-pub use composition::{canonical_composition, canonical_decomposition, compatibility_decomposition};
+pub use self::composition::{canonical_composition, canonical_decomposition, compatibility_decomposition};
 
 mod decomposition;
-pub use decomposition::{decompose_canonical, decompose_compatible};
+pub use self::decomposition::{decompose_canonical, decompose_compatible};
 
 mod gen_cat;
-pub use gen_cat::is_combining_mark;
+pub use self::gen_cat::is_combining_mark;
 
 mod decomposition_type;
-pub use decomposition_type::DecompositionType;
+pub use self::decomposition_type::DecompositionType;
 
 use unic_ucd_hangul::compose_syllable;
 

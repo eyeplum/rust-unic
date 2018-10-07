@@ -14,7 +14,18 @@ exclude = []
 
 [features]
 default = []
-unstable = ["unic-common/unstable"]  # Rust nightly features
+# Rust nightly features
+unstable = [
+    "unic-bidi/unstable",
+    "unic-char/unstable",
+    "unic-common/unstable",
+    "unic-emoji/unstable",
+    "unic-idna/unstable",
+    "unic-normal/unstable",
+    "unic-segment/unstable",
+    "unic-ucd/unstable",
+]
+
 bench_it = ["unic-bidi/bench_it"]
 serde = ["unic-bidi/serde"]
 

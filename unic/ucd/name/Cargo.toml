@@ -16,6 +16,15 @@ unic-ucd-version = { path = "../version/", version = "0.7.0" }
 unic-ucd-hangul = { path = "../hangul/", version = "0.7.0" }
 unic-char-property = { path = "../../char/property/", version = "0.7.0" }
 
+
+[features]
+default = []
+unstable = [
+    "unic-ucd-version/unstable",
+    "unic-ucd-hangul/unstable",
+    "unic-char-property/unstable",
+]
+
 [badges]
 maintenance = { status = "actively-developed" }
 is-it-maintained-issue-resolution = { repository = "behnam/rust-unic" }

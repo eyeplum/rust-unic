@@ -11,7 +11,9 @@
 #![no_std]
 #![forbid(bad_style, future_incompatible, missing_debug_implementations, missing_docs,
           unconditional_recursion, unsafe_code, unused)]
-#![cfg_attr(feature = "unstable", feature(unicode))]
+#![cfg_attr(feature = "unstable", feature(unicode_version))]
+#![cfg_attr(unstable, feature("unstable"))]
+
 
 //! # UNIC — Common Utilities
 //!
@@ -21,6 +23,6 @@
 //!  components.
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 pub mod version;

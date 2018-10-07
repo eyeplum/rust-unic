@@ -36,15 +36,14 @@ extern crate unic_ucd_normal;
 
 mod decompose;
 mod recompose;
+mod pkg_info;
+
+pub use unic_ucd_normal::UNICODE_VERSION;
+pub use self::decompose::Decompositions;
+pub use self::recompose::Recompositions;
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 use std::str::Chars;
-
-pub use decompose::Decompositions;
-pub use recompose::Recompositions;
-pub use unic_ucd_normal::UNICODE_VERSION;
-
-mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 /// Methods for iterating over strings while applying Unicode normalizations
 /// as described in
