@@ -28,28 +28,28 @@ extern crate unic_char_range;
 extern crate unic_ucd_version;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 // == UCD-defined: types and methods ==
 
 pub mod alphabetic;
-pub use alphabetic::{is_alphabetic, Alphabetic};
+pub use self::alphabetic::{is_alphabetic, Alphabetic};
 
 pub mod white_space;
-pub use white_space::{is_white_space, WhiteSpace};
+pub use self::white_space::{is_white_space, WhiteSpace};
 
 // == Non-UCD-defined: methods only ==
 
 pub mod alphanumeric;
-pub use alphanumeric::is_alphanumeric;
+pub use self::alphanumeric::is_alphanumeric;
 
 pub mod control;
-pub use control::is_control;
+pub use self::control::is_control;
 
 pub mod numeric;
-pub use numeric::is_numeric;
+pub use self::numeric::is_numeric;
 
-use unic_ucd_version::UnicodeVersion;
+use self::unic_ucd_version::UnicodeVersion;
 
 /// The [Unicode version](https://www.unicode.org/versions/) of data
 pub const UNICODE_VERSION: UnicodeVersion = include!("../tables/unicode_version.rsv");

@@ -74,4 +74,4 @@ pub use segment::{GraphemeClusterBreak, SentenceBreak, WordBreak};
 pub use unihan::{definition_of, mandarin_of, simplified_variant_of, traditional_variant_of};
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};

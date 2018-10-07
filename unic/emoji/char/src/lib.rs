@@ -23,22 +23,22 @@ extern crate unic_char_range;
 extern crate unic_ucd_version;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 mod emoji_version;
-pub use emoji_version::{UnicodeVersion, EMOJI_VERSION};
+pub use self::emoji_version::{UnicodeVersion, EMOJI_VERSION};
 
 mod emoji;
-pub use emoji::{is_emoji, Emoji};
+pub use self::emoji::{is_emoji, Emoji};
 
 mod emoji_component;
-pub use emoji_component::{is_emoji_component, EmojiComponent};
+pub use self::emoji_component::{is_emoji_component, EmojiComponent};
 
 mod emoji_modifier;
-pub use emoji_modifier::{is_emoji_modifier, EmojiModifier};
+pub use self::emoji_modifier::{is_emoji_modifier, EmojiModifier};
 
 mod emoji_modifier_base;
-pub use emoji_modifier_base::{is_emoji_modifier_base, EmojiModifierBase};
+pub use self::emoji_modifier_base::{is_emoji_modifier_base, EmojiModifierBase};
 
 mod emoji_presentation;
-pub use emoji_presentation::{is_emoji_presentation, EmojiPresentation};
+pub use self::emoji_presentation::{is_emoji_presentation, EmojiPresentation};

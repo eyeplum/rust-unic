@@ -17,15 +17,15 @@ extern crate unic_ucd_version;
 extern crate unic_char_property;
 
 mod readings;
-pub use readings::{definition_of, mandarin_of};
+pub use self::readings::{definition_of, mandarin_of};
 
 mod variants;
-pub use variants::{simplified_variant_of, traditional_variant_of};
+pub use self::variants::{simplified_variant_of, traditional_variant_of};
 
 use unic_ucd_version::UnicodeVersion;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 /// The [Unicode version](https://www.unicode.org/versions/) of data
 pub const UNICODE_VERSION: UnicodeVersion = include!("../tables/unicode_version.rsv");

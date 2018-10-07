@@ -63,13 +63,13 @@
 extern crate core;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 pub mod noncharacter;
-pub use noncharacter::is_noncharacter;
+pub use self::noncharacter::is_noncharacter;
 
 pub mod private_use;
-pub use private_use::is_private_use;
+pub use self::private_use::is_private_use;
 
 pub mod notation;
-pub use notation::unicode_notation;
+pub use self::notation::unicode_notation;

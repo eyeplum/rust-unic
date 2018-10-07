@@ -178,4 +178,4 @@ pub extern crate unic_ucd as ucd;
 pub use ucd::UNICODE_VERSION;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};

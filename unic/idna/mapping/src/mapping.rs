@@ -56,7 +56,7 @@ mod tests {
 
     #[test]
     fn test_mapping() {
-        use Mapping::*;
+        use super::Mapping::*;
 
         assert_eq!(Mapping::of('\u{0}'), DisallowedStd3Valid);
         assert_eq!(Mapping::of('-'), Valid);

@@ -28,9 +28,9 @@ mod mapping;
 use unic_ucd_version::UnicodeVersion;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
-pub use mapping::Mapping;
+pub use self::mapping::Mapping;
 
 /// The version of [Unicode IDNA Compatibility Processing](https://www.unicode.org/reports/tr46/)
 pub const UNICODE_VERSION: UnicodeVersion = include!("../tables/unicode_version.rsv");

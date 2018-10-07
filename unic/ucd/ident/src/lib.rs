@@ -36,7 +36,7 @@ extern crate unic_char_range;
 extern crate unic_ucd_version;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 #[cfg(feature = "xid")]
 mod xid {
@@ -68,7 +68,7 @@ mod xid {
     }
 }
 #[cfg(feature = "xid")]
-pub use xid::{is_xid_continue, is_xid_start, XidContinue, XidStart};
+pub use self::xid::{is_xid_continue, is_xid_start, XidContinue, XidStart};
 
 #[cfg(feature = "id")]
 mod id {
@@ -100,7 +100,7 @@ mod id {
     }
 }
 #[cfg(feature = "id")]
-pub use id::{is_id_continue, is_id_start, IdContinue, IdStart};
+pub use self::id::{is_id_continue, is_id_start, IdContinue, IdStart};
 
 #[cfg(feature = "pattern")]
 mod pattern {
@@ -132,7 +132,7 @@ mod pattern {
     }
 }
 #[cfg(feature = "pattern")]
-pub use pattern::{is_pattern_syntax, is_pattern_whitespace, PatternSyntax, PatternWhitespace};
+pub use self::pattern::{is_pattern_syntax, is_pattern_whitespace, PatternSyntax, PatternWhitespace};
 
 use unic_ucd_version::UnicodeVersion;
 

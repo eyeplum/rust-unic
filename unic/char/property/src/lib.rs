@@ -30,13 +30,13 @@
 extern crate unic_char_range;
 
 mod pkg_info;
-pub use pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
+pub use self::pkg_info::{PKG_DESCRIPTION, PKG_NAME, PKG_VERSION};
 
 mod property;
 pub use self::property::{CharProperty, PartialCharProperty, TotalCharProperty};
 
 mod range_types;
-pub use range_types::{
+pub use self::range_types::{
     BinaryCharProperty,
     CustomCharProperty,
     EnumeratedCharProperty,
