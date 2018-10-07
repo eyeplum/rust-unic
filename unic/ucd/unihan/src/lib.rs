@@ -12,6 +12,7 @@
 #![no_std]
 #![forbid(future_incompatible, missing_debug_implementations, unconditional_recursion, unsafe_code)]
 #![deny(bad_style, unsafe_code, unused)]
+#![cfg_attr(unstable, feature("unstable"))]
 
 extern crate unic_ucd_version;
 extern crate unic_char_property;

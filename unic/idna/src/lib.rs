@@ -12,7 +12,7 @@
 #![forbid(bad_style, future_incompatible, missing_debug_implementations, missing_docs,
           unconditional_recursion, unsafe_code, unused)]
 #![deny(unused_imports)]
-#![cfg_attr(feature = "unstable", feature(unstable))]
+#![cfg_attr(unstable, feature("unstable"))]
 
 //! # UNIC — Unicode IDNA Compatibility Processing
 //!

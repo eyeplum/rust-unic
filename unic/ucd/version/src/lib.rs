@@ -11,7 +11,7 @@
 #![no_std]
 #![forbid(bad_style, future_incompatible, missing_debug_implementations, missing_docs,
           unconditional_recursion, unsafe_code, unused)]
-
+#![cfg_attr(unstable, feature("unstable"))]
 //! # UNIC — UCD — Core
 //!
 //! A component of [`unic`: Unicode and Internationalization Crates for Rust](/unic/).
