@@ -11,7 +11,7 @@
 
 use core::ops::FnMut;
 
-use composition::{canonical_decomposition, compatibility_decomposition};
+use super::composition::{canonical_decomposition, compatibility_decomposition};
 
 use unic_ucd_hangul::{is_syllable, decompose_syllable};
 
