@@ -21,7 +21,8 @@ fn test_block_of() {
 
 #[test]
 fn test_block_iter() {
-    // 291 - [High Surrogates, Private Use Surrogates, Low Surrogates]
+    // High Surrogates, High Private Use Surrogates and Low Surrogates
+    // are omitted in the block iterator
     assert_eq!(BlockIter::new().count(), 288);
 
     let basic_latin = BlockIter::new().nth(0).unwrap();
