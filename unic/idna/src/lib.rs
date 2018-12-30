@@ -11,10 +11,9 @@
 
 #![warn(
     bad_style,
-    future_incompatible,
     missing_debug_implementations,
     missing_docs,
-    unconditional_recursion,
+    unconditional_recursion
 )]
 #![forbid(unsafe_code)]
 
